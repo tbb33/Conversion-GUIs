@@ -3,6 +3,7 @@ from tkinter import *
 
 window=Tk()
 def km_to_miles():
+    t1.delete('1.0', END)
     miles=float(e1_value.get())*.6213
     t1.insert(END, miles)
 
