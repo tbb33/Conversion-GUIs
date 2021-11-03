@@ -10,6 +10,14 @@ def convert():
     lb.insert(END, pounds)
     ounce = float(kg_value.get())*35.274
     oz.insert(END, ounce)
+    
+    #empty text boxes - allows multiple conversions
+    g.delete("1.0", END)  #deletes content of text box from start to END
+    g.insert(END,grams)  #fill text box with value in grams var
+    lb.delete("1.0", END)
+    lb.insert(END,pounds)
+    oz.delete("1.0", END)
+    oz.insert(END,ounce)
 
 kglabel =Label(window, text="Kg")
 kglabel.grid(row=0,column=3)
